@@ -1,0 +1,22 @@
+first_name = "alex"
+last_name = "Rajavi"
+
+full_name = first_name + " " + last_name
+
+consonants = []
+
+def is_consonant(char):
+    char = char.lower()  
+    return char.isalpha() and char not in "aeiou"
+
+for char in full_name:
+    if is_consonant(char):
+        consonants.append(char)
+
+num_consonants = len(consonants)
+
+if num_consonants > 0:
+    print("Consonants in the name:", " ".join(consonants))
+else:
+    print("No consonants found in the name.")
+
